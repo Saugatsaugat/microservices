@@ -10,7 +10,8 @@
 	</parent>
 	<groupId>com.saugat</groupId>
 	<artifactId>cards</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
+    <packaging>jar</packaging>
 	<name>cards</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -89,6 +90,16 @@
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.4.6</version>
+                <configuration>
+                    <to>
+                        <image>saugatsaugat/${project.artifactId}:s4</image>
+                    </to>
+                </configuration>
+            </plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
