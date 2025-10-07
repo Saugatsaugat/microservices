@@ -14,20 +14,18 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
   config:
-    import:
-      - "application_prod.yml"
-      - "application_qa.yml"
+    activate:
+      on-profile: "qa"
 
 build:
-  version: "3.0"
+  version: "2.0"
 
 loans:
-  message: "Welcome to EazyBank Loans related to local APIs"
+  message: "Welcome to EazyBank Loans QA Team"
   contactDetails:
-    name: "John Doe - Developer"
-    email: "john@eazybank.com"
+    name: "Joseph Son - QA Lead"
+    email: "j.son@eazybank.com"
   onCallSupport:
-    - (555) 555-5555
-    - (666) 666-6666
+    - (333) 333-3333
+    - (444) 444-4444

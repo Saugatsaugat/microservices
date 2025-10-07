@@ -16,18 +16,17 @@ spring:
     show-sql: true
 
   config:
-    import:
-      - "application_prod.yml"
-      - "application_qa.yml"
+    activate:
+      on-profile: "prod"
 
 build:
-  version: "3.0"
+  version: "1.0"
 
 loans:
-  message: "Welcome to EazyBank Loans related to local APIs"
+  message: "Welcome to EazyBank Loans application"
   contactDetails:
-    name: "John Doe - Developer"
-    email: "john@eazybank.com"
+    name: "Mar Henry - CEO"
+    email: "mark.henry@eazybank.com"
   onCallSupport:
-    - (555) 555-5555
-    - (666) 666-6666
+    - (111) 111-1111
+    - (222) 222-2222
