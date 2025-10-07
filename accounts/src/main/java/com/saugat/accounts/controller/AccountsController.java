@@ -1,6 +1,7 @@
 package com.saugat.accounts.controller;
 
 import com.saugat.accounts.constants.AccountsConstants;
+import com.saugat.accounts.dto.AccountsContactInfoDto;
 import com.saugat.accounts.dto.CustomerDto;
 import com.saugat.accounts.dto.ErrorResponseDto;
 import com.saugat.accounts.dto.ResponseDto;
@@ -42,6 +43,9 @@ public class AccountsController {
 
     @Autowired
     private Environment environment;
+
+    @Autowired
+    private AccountsContactInfoDto accountsContactInfoDto;
 
     @Operation(
             summary = "Create Account REST API",
@@ -182,6 +186,30 @@ public class AccountsController {
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(environment.toString());
+    }
+
+    @Operation(
+            summary = "Get Contact Info",
+            description = "Return the contact info for the current application"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "HTTP Status OK"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status INTERNAL SERVER ERROR",
+                    content = @Content(
+                            schema = @Schema(implementation = ErrorResponseDto.class)
+                    )
+            )}
+    )
+    @GetMapping("/contact-info")
+    public ResponseEntity<AccountsContactInfoDto> getContactInfo(){
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(accountsContactInfoDto);
     }
 
 }
