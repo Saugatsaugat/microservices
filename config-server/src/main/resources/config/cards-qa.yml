@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+cards:
+  message: "Welcome to EazyBank QA Team Cards"
+  contactDetails:
+    name: "Joseph Son - QA Lead"
+    email: "j.son@eazybank.com"
+  onCallSupport:
+    - (333) 333-3333
+    - (444) 444-4444
