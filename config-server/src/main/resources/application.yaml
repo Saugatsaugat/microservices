@@ -2,12 +2,19 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native
+    active: git
+  #    active: native  # for file path and class path
   cloud:
     config:
       server:
-        native:
-          search-locations: "file:///home//saugat//Desktop//JAVA//Collection//config" # from file path
+        git:
+          uri: "https://github.com/Saugatsaugat/microservices-config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+#        native:
+#          search-locations: "file:///home//saugat//Desktop//JAVA//Collection//config" # from file path
 #          search-locations: "classpath:/config"  #from class path
 
 
