@@ -21,6 +21,12 @@ spring:
   config:
     import: "configserver:http://localhost:8071/"
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 build:
   version: "3.0"
 

@@ -21,6 +21,12 @@ spring:
   profiles:
     active: "prod"
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 build:
   version: "3.0"
 
