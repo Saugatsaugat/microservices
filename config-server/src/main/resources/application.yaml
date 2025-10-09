@@ -22,16 +22,16 @@ spring:
     username: "guest"
     password: "guest"
 
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: "*"
-    health:
-      readiness-state:
-        enabled: true
-      liveness-state:
-        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
   endpoint:
     health:
       probes:
