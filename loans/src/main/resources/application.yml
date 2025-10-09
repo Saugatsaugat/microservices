@@ -23,8 +23,8 @@ spring:
   rabbitmq:
     host: "localhost"
     port: 5672
-    username: "saugat"
-    password: "Saugat@123"
+    username: "guest"
+    password: "guest"
 
 management:
   endpoints:
