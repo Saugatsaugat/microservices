@@ -17,7 +17,7 @@ spring:
   application:
     name: "loans"
   config:
-    import: "configserver:http://localhost:8071/"
+    import: "optional:configserver:http://localhost:8071/"
   profiles:
     active: "prod"
   rabbitmq:
