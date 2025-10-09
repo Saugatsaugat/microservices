@@ -20,6 +20,11 @@ spring:
     active: "prod"
   config:
     import: "configserver:http://localhost:8071/"
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "saugat"
+    password: "Saugat@123"
 
 management:
   endpoints:
