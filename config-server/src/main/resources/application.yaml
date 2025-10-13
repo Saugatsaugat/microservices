@@ -16,11 +16,11 @@ spring:
 #        native:
 #          search-locations: "file:///home//saugat//Desktop//JAVA//Collection//config" # from file path
 #          search-locations: "classpath:/config"  #from class path
-  rabbitmq:
-    host: "localhost"
-    port: 5672
-    username: "guest"
-    password: "guest"
+#  rabbitmq:
+#    host: "localhost"
+#    port: 5672
+#    username: "guest"
+#    password: "guest"
 
 management:
   endpoints:

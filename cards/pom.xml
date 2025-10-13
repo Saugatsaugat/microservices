@@ -56,8 +56,8 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -79,10 +79,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-bus-amqp</artifactId>-->
+<!--        </dependency>-->
 	</dependencies>
 
     <dependencyManagement>
@@ -127,7 +127,7 @@
                 <version>3.4.6</version>
                 <configuration>
                     <to>
-                        <image>saugatsaugat/${project.artifactId}:s6</image>
+                        <image>saugatsaugat/${project.artifactId}:s7</image>
                     </to>
                 </configuration>
             </plugin>
