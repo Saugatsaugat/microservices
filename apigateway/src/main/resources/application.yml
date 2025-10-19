@@ -5,7 +5,12 @@ spring:
     name: "apigateway"
   config:
     import: "optional:configserver:http://localhost:8071/"
-
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
 management:
   endpoints:
     web:
