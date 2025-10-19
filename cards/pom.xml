@@ -137,7 +137,7 @@
                 <version>3.4.6</version>
                 <configuration>
                     <to>
-                        <image>saugatsaugat/${project.artifactId}:s7</image>
+                        <image>saugatsaugat/${project.artifactId}:s8</image>
                     </to>
                 </configuration>
             </plugin>
