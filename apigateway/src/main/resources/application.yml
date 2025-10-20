@@ -10,7 +10,12 @@ spring:
       discovery:
         locator:
           enabled: true
-          lowerCaseServiceId: true
+      server:
+        webflux:
+          discovery:
+            locator:
+              lower-case-service-id: true
+              enabled: false
 management:
   endpoints:
     web:
