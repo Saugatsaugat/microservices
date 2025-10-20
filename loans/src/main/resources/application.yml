@@ -49,14 +49,8 @@ info:
     description: "Eazy Bank Loans Application"
     version: "1.0.0"
 
-build:
-  version: "3.0"
-
-loans:
-  message: "Welcome to EazyBank Loans related to local APIs"
-  contactDetails:
-    name: "John Doe - Developer"
-    email: "john@eazybank.com"
-  onCallSupport:
-    - (555) 555-5555
-    - (666) 666-6666
+logging:
+  level:
+    com:
+      saugat:
+        loans: DEBUG

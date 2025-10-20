@@ -61,3 +61,8 @@ accounts:
   onCallSupport:
     - (555) 555-5555
     - (666) 666-6666
+logging:
+  level:
+    com:
+      saugat:
+        accounts: DEBUG

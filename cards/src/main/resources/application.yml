@@ -52,14 +52,8 @@ info:
     description: "Eazy Bank Cards Application"
     version: "1.0.0"
 
-build:
-  version: "3.0"
-
-cards:
-  message: "Welcome to EazyBank Cards related to local APIs"
-  contactDetails:
-    name: "John Doe - Developer"
-    email: "john@eazybank.com"
-  onCallSupport:
-    - (555) 555-5555
-    - (666) 666-6666
+logging:
+  level:
+    com:
+      saugat:
+        cards: DEBUG
