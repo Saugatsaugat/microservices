@@ -16,6 +16,6 @@ public interface ICustomerDetailsService {
      *           <li>500 Internal Server Error — unexpected server-side error</li>
      *         </ul>
      */
-    ResponseEntity<CustomerDetailsDto> fetchCustomerDetails(String mobileNumber);
+    ResponseEntity<CustomerDetailsDto> fetchCustomerDetails(String mobileNumber, String correlationId);
 
 }
