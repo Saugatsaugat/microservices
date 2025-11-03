@@ -20,6 +20,10 @@ spring:
     active: "prod"
   config:
     import: "optional:configserver:http://localhost:8071/"
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
 
 management:
   endpoints:
@@ -72,3 +76,12 @@ logging:
     com:
       saugat:
         accounts: DEBUG
+
+resilience4j:
+  circuitbreaker:
+    configs:
+        default:
+            slidingWindowSize: 10
+            permittedNumberOfCallsInHalfOpenState: 5
+            failureRateThreshold: 50
+            waitDurationInOpenState: 10000
