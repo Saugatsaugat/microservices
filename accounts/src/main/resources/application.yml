@@ -77,23 +77,28 @@ logging:
       saugat:
         accounts: DEBUG
 
-resilience4j:
-  circuitbreaker:
-    configs:
-        default:
-            slidingWindowSize: 10
-            permittedNumberOfCallsInHalfOpenState: 5
-            failureRateThreshold: 50
-            waitDurationInOpenState: 10000
-  retry:
-    configs:
-        default:
-            maxAttempts: 3
-            waitDuration: 500
-            enableExponentialBackoff: true
-            exponential-backoff-multiplier: 2
-            ignore-exceptions:
-              - java.lang.NullPointerException
-            retry-exceptions:
-              - java.util.concurrent.TimeoutException
+resilience4j.circuitbreaker:
+  configs:
+      default:
+          slidingWindowSize: 10
+          permittedNumberOfCallsInHalfOpenState: 5
+          failureRateThreshold: 50
+          waitDurationInOpenState: 10000
+resilience4j.retry:
+  configs:
+      default:
+          maxAttempts: 3
+          waitDuration: 500
+          enableExponentialBackoff: true
+          exponential-backoff-multiplier: 2
+          ignore-exceptions:
+            - java.lang.NullPointerException
+          retry-exceptions:
+            - java.util.concurrent.TimeoutException
 
+resilience4j.ratelimiter:
+    configs:
+        default:
+            limitForPeriod: 1
+            limitRefreshPeriod: 5000
+            timeoutDuration: 1000
