@@ -6,6 +6,7 @@ import com.saugat.accounts.dto.CustomerDto;
 import com.saugat.accounts.dto.ErrorResponseDto;
 import com.saugat.accounts.dto.ResponseDto;
 import com.saugat.accounts.service.IAccountsService;
+import io.github.resilience4j.retry.annotation.Retry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -205,11 +206,18 @@ public class AccountsController {
                     )
             )}
     )
+    @Retry(name = "getContactInfo", fallbackMethod = "getContactInfoFallBack")
     @GetMapping("/contact-info")
-    public ResponseEntity<AccountsContactInfoDto> getContactInfo(){
+    public ResponseEntity<String> getContactInfo(){
         return ResponseEntity
                 .status(HttpStatus.OK)
-                .body(accountsContactInfoDto);
+                .body(accountsContactInfoDto.toString());
     }
 
-}
+    public ResponseEntity<String> getContactInfoFallBack(Throwable throwable) {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body("Service is down, please try again later.");
+    }
+
+    }
