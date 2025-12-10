@@ -121,3 +121,4 @@ services:
 networks:
   eazybank:
     driver: "bridge"
+    # driver: ""
