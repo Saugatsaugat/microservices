@@ -18,4 +18,3 @@ management:
     health:
       probes:
         enabled: true
-#
